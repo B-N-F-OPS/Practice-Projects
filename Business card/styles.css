@@ -1,0 +1,46 @@
+body {
+    margin: 20px;
+    background-image: linear-gradient(to right, rgb(110, 231, 183), rgb(59, 130, 246), rgb(147, 51, 234));
+}
+
+.card {
+    border: 1px dotted #b2c2c9;
+    text-align: center;
+    width: 400px;
+    margin: 0 auto;
+    background: #219ebc;
+    border-bottom: 3px solid #ffb703;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation-duration: 3s;
+    animation-name: moveRight;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.content {
+    display: flex;
+    margin: 15px auto;
+    padding: auto;
+    justify-content: space-around;
+    color: #023047;
+}
+
+.avatar{
+    width: 200px;
+}
+.text{
+    border: 0 dotted #8ecae6;
+}
+
+.motto{
+    color: #023047;
+    font-weight: bold;
+}
+
+@keyframes moveRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
