@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    background-image: url("Assets/bg.jpg");
+    color: aliceblue;
+    background-size: cover;
+}
+
+/* header/navbar section */
+.header {
+    display:flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid whitesmoke;
+}
+
+.social {
+    width: 25px;
+    margin-top: 20px;
+}
+
+/* content body*/
+.contentheader {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 0 250px;
+}
+
+.navbar {
+    display: flex;
+    margin: 20px 350px 0 0;
+}
+
+.nav {
+    margin-left: 20px;
+}
+
+#search {
+    background: none;
+}
+
+#appointment {
+    background: #F76638;
+    border: none;
+    border-radius: 20px;
+    color: aliceblue;
+    padding: 0 7px;
+}
