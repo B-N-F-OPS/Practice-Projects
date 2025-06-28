@@ -1,0 +1,55 @@
+body {
+    background-image: url("Assets/bg.jpg");
+    background: cover;
+    color: aliceblue;
+    font-family: "Jim Nightshade", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*header section*/
+.headercolor{
+    background:#6D9BB8;
+    opacity: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 15px;
+    margin: 0 500px;
+    font-weight: bolder;
+    color: whitesmoke;
+}
+
+#cta1 {
+    background: #8FA5BA;
+    margin: 8px 2px;
+    border: none;
+    padding: 2px 5px;
+}
+
+ /*hero section*/
+.hero {
+    margin: 200px 0 0 400px;
+}
+
+.that {
+    text-decoration: underline red;
+    text-underline-offset: 40px;
+}
+
+.about {
+    margin: 100px 0 30px 0;
+}
+
+#cta2 {
+    padding: 7px 30px;
+    font-family: "Nova Square", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border: none;
+    color: aliceblue;
+    background: #e5383b;
+    
+}
