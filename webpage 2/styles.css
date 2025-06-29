@@ -3,6 +3,7 @@ body {
     background-image: url("Assets/bg.jpg");
     color: aliceblue;
     background-size: cover;
+    text-shadow: 2px 1px 4px black;
 }
 
 /* header/navbar section */
@@ -21,7 +22,7 @@ body {
 .contentheader {
     display: flex;
     justify-content: space-between;
-    margin: 20px 0 0 250px;
+    margin: 20px 0 0 0px;
 }
 
 .navbar {
@@ -43,4 +44,88 @@ body {
     border-radius: 20px;
     color: aliceblue;
     padding: 0 7px;
+    width: 150px;
+    height: 40px;
+    margin-top: 7px;
+}
+
+#menu  {
+    background: #F76638;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    margin-top: 7px;
+    padding: 5px;
+}
+
+#search  {
+    border: 1px solid whitesmoke;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    margin-top: 7px;
+    padding: 5px;
+}
+
+.contentBody {
+    margin-left: 100px;
+}
+
+#services {
+    background: #F76638;
+    border: none;
+    border-radius: 20px;
+    color: aliceblue;
+    padding: 0 7px;
+    width: 150px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+#contact {
+    background: none;
+    border: 1px solid white;
+    border-radius: 20px;
+    color: aliceblue;
+    padding: 0 7px;
+    width: 150px;
+    height: 40px;
+    margin-top: 20px;
+}
+
+.topservices {
+    display: flex;
+    margin-top: 100px;
+    justify-content: space-between;
+    margin-right: 350px;
+}
+
+.finance {
+    border: 0px solid white;
+    background-color: rgba(37, 8, 71, 0.5); /* Semi-transparent black */
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.consulting {
+    border: 0px solid white;
+    background-color: rgba(37, 8, 71, 0.5); /* Semi-transparent black */
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.reporting {
+    border: 0px solid white;
+    background-color: rgba(37, 8, 71, 0.5); /* Semi-transparent black */
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.technology {
+    border: 0px solid white;
+    background-color: rgba(37, 8, 71, 0.5); /* Semi-transparent black */
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
