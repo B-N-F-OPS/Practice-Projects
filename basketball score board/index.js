@@ -1,4 +1,4 @@
-// home wins
+// home points
 let takehomeEl = document.getElementById("takehome")
 
 function add1home() {
@@ -19,7 +19,7 @@ function add3home() {
     takehomeEl.innerText = result
 }
 
-// Guests wins
+// Guests points
 let takeguestsEl = document.getElementById("takeguests")
 function add1guests() {
     let currentvalue = takeguestsEl.innerText
