@@ -1,0 +1,47 @@
+body {
+    background-image: url("/Assets/bg.jpg");
+    background-size: cover;
+    color: white;
+}
+
+.board {
+    display: flex;
+    justify-content: space-around;
+    margin: 100px auto 0px auto;
+    background: #003049;
+    height: 300px;
+    width: 500px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: rgba(233, 228, 228, 0.884) 0px 54px 55px, rgba(236, 233, 233, 0.12) 0px -12px 30px, rgba(233, 228, 228, 0.12) 0px 4px 6px, rgba(226, 223, 223, 0.17) 0px 12px 13px, rgba(223, 217, 217, 0.09) 0px -3px 5px;
+}
+
+@font-face {
+    font-family: technology;
+    src: url("technology.bold.ttf");
+}
+
+.score {
+    font-family: technology;
+    font-size: 100px;
+    color: red;
+    background: black;
+    margin: 20px 0px 20px 0px;
+}
+
+button {
+    font-family: technology;
+    background: none;
+    color: aliceblue;
+    border: none;
+    padding: 10px;
+    border: 1px solid rgb(155, 159, 163);
+    border-radius: 7px;
+    margin-left: 5px;
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+button:hover {
+    background: #6a994e;
+}
