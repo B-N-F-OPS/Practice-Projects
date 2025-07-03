@@ -44,4 +44,7 @@ button {
 
 button:hover {
     background: #6a994e;
+    padding: 13px;
+    margin-left: 0px;
+    margin-top: 4px;
 }
