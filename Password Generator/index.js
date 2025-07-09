@@ -14,18 +14,25 @@ function Generate() {
     let password1EL = document.getElementById("password1-el")
     let password2EL = document.getElementById("password2-el")
     let inputEL = document.getElementById("input-el").value
+    let errorEL =document.getElementById("error-el") 
 
     //for first password
-    for (let i=0; i<inputEL; i++) {
-        let randomIndex = Math.floor(Math.random() * characters.length)
-        randomPass1 += characters[randomIndex]
+    if (inputEL > 20) {
+        errorEL.textContent = 'password length unreasonable'
+    } else if (inputEL < 8) {
+        errorEL.textContent = 'password too short'
+    } else { 
+        for (let i=0; i<inputEL; i++) {
+            let randomIndex = Math.floor(Math.random() * characters.length)
+            randomPass1 += characters[randomIndex]
+        }
+        password1EL.textContent = randomPass1 // put it outside the loop coz because i only want to update the displayed password once, after it's fully generated — not after every single character is added.
+        errorEL.textContent = ''
+        // for second password
+        for (let i=0; i<inputEL; i++) {
+            let randomIndex = Math.floor(Math.random() * characters.length)
+            randomPass2 += characters[randomIndex]
+        }
+        password2EL.textContent = randomPass2
     }
-    password1EL.textContent = randomPass1 // put it outside the loop coz because i only want to update the displayed password once, after it's fully generated — not after every single character is added.
-
-    // for second password
-    for (let i=0; i<inputEL; i++) {
-        let randomIndex = Math.floor(Math.random() * characters.length)
-        randomPass2 += characters[randomIndex]
-    }
-    password2EL.textContent = randomPass2
 }
