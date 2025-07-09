@@ -49,12 +49,34 @@ button {
 }
 
 h3 {
-    width: 120px;
+    width: 140px;
+    height: 30px;
     background: #314053;
     padding: 10px 30px;
     border-radius: 10px;
     color: #55F991;
+    text-align: center;
     font-weight: lighter;
     font-size: medium;
     margin-top: 50px;
+    word-wrap: break-word;
+    overflow-y: auto;
+}
+
+input {
+    margin-left: 10px;
+    width: 85px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+}
+
+input::placeholder {
+    font-size: 11px;
+    padding: 5px 0px;
+}
+
+input[type="text"] {
+    padding-left: 10px;
+    text-align: start;
 }

@@ -13,14 +13,17 @@ function Generate() {
     let randomPass2 = ""
     let password1EL = document.getElementById("password1-el")
     let password2EL = document.getElementById("password2-el")
+    let inputEL = document.getElementById("input-el").value
 
-    for (let i=0; i<15; i++) {
+    //for first password
+    for (let i=0; i<inputEL; i++) {
         let randomIndex = Math.floor(Math.random() * characters.length)
         randomPass1 += characters[randomIndex]
     }
-    password1EL.textContent = randomPass1
+    password1EL.textContent = randomPass1 // put it outside the loop coz because i only want to update the displayed password once, after it's fully generated — not after every single character is added.
 
-    for (let i=0; i<15; i++) {
+    // for second password
+    for (let i=0; i<inputEL; i++) {
         let randomIndex = Math.floor(Math.random() * characters.length)
         randomPass2 += characters[randomIndex]
     }
