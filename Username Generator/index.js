@@ -18,7 +18,7 @@ const numbers = [0,1,2,3,4,5,6,7,8,9]
 const generateEl = document.getElementById("Generate")
 
 generateEl.addEventListener("click", function() {
-    const inputEL = document.getElementById("input-el")
+    let inputEL = document.getElementById("input-el")
     const errorEl = document.getElementById("error-el")
     const Username1El = document.getElementById("Username1-el")
     const Username2El = document.getElementById("Username2-el")
@@ -59,5 +59,6 @@ generateEl.addEventListener("click", function() {
         errorEl.textContent = ""
         Username1El.textContent = randoMized()
         Username2El.textContent = randoMized()
+        inputEL.value = ''
     }
 })

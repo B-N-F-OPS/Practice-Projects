@@ -4,55 +4,60 @@ const characters = ["A","B","C","D","E","F","G","H","I",
     "m","n","o","p","q","r","s","t","u","v","w","x","y","z",
     "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
     "~","`","!","@","#","$","%","^","&","*","(",")","_",
-    "-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"];
+    "-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"]
 
 
-
-function Generate() {
-    let randomPass1 = ""
-    let randomPass2 = ""
+const generateEl = document.getElementById("generate")
+generateEl.addEventListener("click", function() {
     let password1EL = document.getElementById("password1-el")
     let password2EL = document.getElementById("password2-el")
-    let inputEL = document.getElementById("input-el").value
+    let inputEL = document.getElementById("input-el")
     let errorEL =document.getElementById("error-el") 
 
-    if (inputEL > 20) {
+    if (inputEL.value > 20) {
         errorEL.textContent = 'password length unreasonable'
-    } else if (inputEL < 8) {
+    } else if (inputEL.value < 8) {
         errorEL.textContent = 'password too short'
     } else { 
-
-        //for first password
-        for (let i=0; i<inputEL; i++) {
-            let randomIndex = Math.floor(Math.random() * characters.length)
-            randomPass1 += characters[randomIndex]
+        function randomize() {
+            let randomPass = ''
+            for (let i=0; i<inputEL.value; i++) {
+                let randomIndex = Math.floor(Math.random() * characters.length)
+                randomPass += characters[randomIndex]
+            }
+            return randomPass
         }
-        password1EL.textContent = randomPass1 // put it outside the loop coz because i only want to update the displayed password once, after it's fully generated — not after every single character is added.
-        errorEL.textContent = ''
-        // for second password
-        for (let i=0; i<inputEL; i++) {
-            let randomIndex = Math.floor(Math.random() * characters.length)
-            randomPass2 += characters[randomIndex]
-        }
-        password2EL.textContent = randomPass2
+        password1EL.textContent = randomize()
+        password2EL.textContent = randomize()
     }
-}
+})
 
-// not working. aim is for user to be able to copy text to clipboard
-function copyText() {
-    let password1EL = document.getElementById("password2-el");
 
-    password1EL.select();
-    copyText.setSelectionRange(0, 99999);
 
-    navigator.clipboard.writeText(password1EL.innerText);
-}
+// copy text to clipboard
+let password1EL = document.getElementById("password1-el")
+let password2EL = document.getElementById("password2-el")
+let pass1 = "password2-el"
+let pass2 = "password2-el"
 
-function copyText2() {
-    let password2EL = document.getElementById("password2-el");
+password1EL.addEventListener("click", function() {
+    const text = document.getElementById('password1-el').innerText
+    navigator.clipboard.writeText(text)
+    .then(() => {
+        alert("Text copied to clipboard!");
+    })
+    .catch(err => {
+        console.error("Failed to copy: ", err);
+    })
+}) 
 
-    password2EL.select();
-    copyText.setSelectionRange(0, 99999);
-
-    navigator.clipboard.writeText(password2EL.innerText);
-}
+password2EL.addEventListener("click", function() {
+    const text = document.getElementById('password2-el').innerText
+    navigator.clipboard.writeText(text)
+    .then(() => {
+        alert("Text copied to clipboard!");
+    })
+    .catch(err => {
+        console.error("Failed to copy: ", err);
+    })
+})
