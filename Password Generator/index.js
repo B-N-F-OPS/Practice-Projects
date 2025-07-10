@@ -16,12 +16,13 @@ function Generate() {
     let inputEL = document.getElementById("input-el").value
     let errorEL =document.getElementById("error-el") 
 
-    //for first password
     if (inputEL > 20) {
         errorEL.textContent = 'password length unreasonable'
     } else if (inputEL < 8) {
         errorEL.textContent = 'password too short'
     } else { 
+
+        //for first password
         for (let i=0; i<inputEL; i++) {
             let randomIndex = Math.floor(Math.random() * characters.length)
             randomPass1 += characters[randomIndex]
@@ -35,4 +36,23 @@ function Generate() {
         }
         password2EL.textContent = randomPass2
     }
+}
+
+// not working. aim is for user to be able to copy text to clipboard
+function copyText() {
+    let password1EL = document.getElementById("password2-el");
+
+    password1EL.select();
+    copyText.setSelectionRange(0, 99999);
+
+    navigator.clipboard.writeText(password1EL.innerText);
+}
+
+function copyText2() {
+    let password2EL = document.getElementById("password2-el");
+
+    password2EL.select();
+    copyText.setSelectionRange(0, 99999);
+
+    navigator.clipboard.writeText(password2EL.innerText);
 }
