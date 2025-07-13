@@ -32,32 +32,24 @@ generateEl.addEventListener("click", function() {
     }
 })
 
-
-
 // copy text to clipboard
 let password1EL = document.getElementById("password1-el")
 let password2EL = document.getElementById("password2-el")
-let pass1 = "password2-el"
-let pass2 = "password2-el"
 
-password1EL.addEventListener("click", function() {
-    const text = document.getElementById('password1-el').innerText
-    navigator.clipboard.writeText(text)
+function copyText(textEl) {
+    navigator.clipboard.writeText(textEl.innerText)
     .then(() => {
         alert("Text copied to clipboard!");
     })
     .catch(err => {
         console.error("Failed to copy: ", err);
     })
-}) 
+}
 
-password2EL.addEventListener("click", function() {
-    const text = document.getElementById('password2-el').innerText
-    navigator.clipboard.writeText(text)
-    .then(() => {
-        alert("Text copied to clipboard!");
-    })
-    .catch(err => {
-        console.error("Failed to copy: ", err);
-    })
+password1EL.addEventListener("click", function(){
+    copyText(password1EL)
+})
+
+password2EL.addEventListener("click", function(){
+    copyText(password2EL)
 })

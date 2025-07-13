@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .page {
+                background: rgb(107, 107, 192);
+                width: 700px;
+                max-height: 750px;
+                overflow: auto;
+                text-align: center;
+                margin: 20px auto;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                border-radius: 30px;
+                box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+            }
+
+            h1 {
+                padding: 40px 0px 20px 0px;
+                border-bottom: 1px solid rgb(162, 162, 230);
+                margin: 0px 200px;
+            }
+
+            input {
+                border: none;
+                border-radius: 10px;
+                width: 120px;
+                height: 40px;
+                display: block;
+                margin: 20px auto;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+            }
+
+            input[type='number'] {
+                text-align: center;
+                padding: 7px 0px;
+                font-size: larger;
+            }
+
+            button {
+                border: none;
+                padding: 10px;
+                font-weight: bold;
+                border-radius: 5px;
+                background: #778da9;
+                color: antiquewhite;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            }
+
+            button:active {
+                background: #e0e1dd;
+                color: black;
+            }
+            .units {
+                padding-top: 30px;
+            }
+
+            h2 {
+                padding: 30px 0px 30px 0px;
+                background: #778da9;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                margin: 30px 40px;
+                border-radius: 10px;
+                border-bottom: 5px solid black;
+            }
+
+            span {
+                color: antiquewhite;
+                font-size: medium;
+                padding: 5px 40px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="page">
+            <h1>UNIT CONVERTOR</h1>
+            <input type="number" id="input-el">
+            <button id="convert-el">CONVERT</button>
+
+            <div class="units">
+                <h2>Length (Meters/Feet)<br><span id="lenght-el"></span></h2>
+                <h2>Volume (litres/Gallons)<br><span id="Volume-el"></span></h2>
+                <h2>Mass (Kilogram/pounds)<br><span id="mass-el"></span></h2>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

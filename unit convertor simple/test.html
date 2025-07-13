@@ -1,0 +1,17 @@
+<button class="toggle-btn">Click me</button>
+
+<style>
+.toggle-btn         { background: #444; color:#fff; padding:.5rem 1rem; }
+.toggle-btn.active  { background: green; }
+</style>
+
+<script>
+document.querySelectorAll('.toggle-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    // remove .active from siblings
+    document.querySelectorAll('.toggle-btn.active').forEach(b => b.classList.remove('active'));
+    // add to the one just clicked
+    btn.classList.add('active');
+  });
+});
+</script>
