@@ -17,55 +17,39 @@ function renderUnits(array) {
         field1 += `<li><p id='${ids1[i]}'>${(array[i]).toUpperCase()}</p></li>` // each unit of measure is listed, given a tag and assigned an ID 
         field2 += `<li><p id='${ids2[i]}'>${(array[i]).toUpperCase()}</p></li>`
         localStorage.setItem('units', JSON.stringify(array))
+        localStorage.setItem('ids1', JSON.stringify(ids1))
+        localStorage.setItem('ids2', JSON.stringify(ids2))
     };
     ulElFrom.innerHTML = field1
     ulElTo.innerHTML = field2
 }; //function ends here
 
 
-// all units collected by DOM after they've been given IDs
-const unit1El = document.getElementById('unit1');
-const unit2El = document.getElementById('unit2');
-const unit3El = document.getElementById('unit3');
-const unit4El = document.getElementById('unit4');
-const unit5El = document.getElementById('unit5');
-const unit6El = document.getElementById('unit6');
-const unit7El = document.getElementById('unit7');
 
 
-//function for when unit1/A is clicked.
-function unit1Clicked() {
-    const unit1El = document.getElementById('unit1');
-    const unitAEl = document.getElementById('unitA');
-    const fromFieldEl = document.getElementById('fromField');
-    const toFieldEl = document.getElementById('toField');
-
-    if (unit1El === MILLIMETER && unitAEl === MILLIMETER) {
-        let convert = 
-        convert += fromFieldEl.value * 10
-    };
-    toFieldEl.value = convert
-}; // function ends here
-
-
-//if user selects length button, contents are displayed
+//if user selects length button, contents are displayed, then proceeds to select other actions
 const lengthEl = document.getElementById('Length-el')
 lengthEl.addEventListener('click', function() {
     renderUnits(LengthUnits) // contents displayed
 
     const dataFromLocalStorage = JSON.parse(localStorage.getItem('units'));
+    const ids1FromLocalStorage = JSON.parse(localStorage.getItem('ids1'));
+    const ids2FromLocalStorage = JSON.parse(localStorage.getItem('ids2'));
    
     // user clicks on unit1
     const unit1El = document.getElementById('unit1');
-    const unitAEl = document.getElementById('unitA');
     unit1El.addEventListener('click', function() {
-        localStorage.setItem('unit1Cl', 'MILLIMETER' )
+        const toFieldEl = document.getElementById('toField')
+        const unitAEl = document.getElementById('unitA');
+        let fromFieldEl = document.getElementById('fromField');
+        const mlToMl = 3
+        let ans = 
         unitAEl.addEventListener('click', function() {
-            localStorage.getItem('unit1Cl')
-            unit1Clicked()
+            ans += fromFieldEl.value * mlToMl
+            toFieldEl.value = ans
         });
     });
-
+    
 });
 
 
