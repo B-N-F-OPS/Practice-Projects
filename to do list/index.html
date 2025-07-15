@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+            .page {
+                background: #dda15e;
+                width: 500px;
+                max-height: 500px;
+                min-height: 300px;
+                margin: 0px auto;
+                overflow-y: auto;
+                border-radius: 10px;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+            }
+
+            h1 {
+                border-bottom: 1px solid rgb(75, 73, 73);
+                text-align: center;
+                font-size: medium;
+                padding: 5px;
+            }
+
+            ul {
+                padding-left: 10px;
+                font-weight: light;
+                padding-right: 15px;
+
+            }
+
+            li { 
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                list-style-type: none;
+                font-size: large;
+                padding-bottom: 10px;
+                padding-top: 10px;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            }
+
+            .inputText {
+                display: flex;
+                justify-content: space-around;
+            }
+
+            #input-el {
+                border: none;
+                background: #af8a5f;
+                height: 30px;
+                width: 400px;
+            
+            }
+
+            button {
+                background: #dda15e;
+                border: none;
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+                border-radius: 5px;
+            }
+
+            button:active{
+                background: #af8a5f;
+                color: #fefae0;
+            }
+
+            input[type='text'] {
+                color: aliceblue;        
+            }
+
+            #delete-btn {
+                margin-top: 7px;
+                margin-left: 10px;
+                padding: 5px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="page">
+            <h1>TO DO LIST</h1>
+            <div class="inputText">
+                <input id='input-el' type=text>
+                <button id="addTask-btn">Add Task</button>
+            </div>
+            <button id="delete-btn">Delete all Tasks</button>
+
+            <ul id="listItems"></ul>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
