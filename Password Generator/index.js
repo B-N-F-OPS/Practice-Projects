@@ -1,10 +1,4 @@
-const characters = ["A","B","C","D","E","F","G","H","I",
-    "J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",
-    "a","b","c","d","e","f","g","h","i","j","k","l",
-    "m","n","o","p","q","r","s","t","u","v","w","x","y","z",
-    "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
-    "~","`","!","@","#","$","%","^","&","*","(",")","_",
-    "-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"]
+import { characters, copyText } from './data.js'
 
 
 const generateEl = document.getElementById("generate")
@@ -32,24 +26,8 @@ generateEl.addEventListener("click", function() {
     }
 })
 
-// copy text to clipboard
-let password1EL = document.getElementById("password1-el")
-let password2EL = document.getElementById("password2-el")
-
-function copyText(textEl) {
-    navigator.clipboard.writeText(textEl.innerText)
-    .then(() => {
-        alert("Text copied to clipboard!");
-    })
-    .catch(err => {
-        console.error("Failed to copy: ", err);
-    })
-}
-
-password1EL.addEventListener("click", function(){
-    copyText(password1EL)
-})
-
-password2EL.addEventListener("click", function(){
-    copyText(password2EL)
+// listen to which password was clicked
+const passwordsEL = document.getElementById("passwords-el")
+passwordsEL.addEventListener('click', function(e) {
+    copyText(e.target.id)
 })

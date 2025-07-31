@@ -1,0 +1,79 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.mainContainer{
+    width: 400px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 20px auto;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    background-color: antiquewhite;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+    }
+
+.hobbyPng{
+    width: 100px;
+    height: 100px;
+    padding-left: 20px;
+}
+
+.appName{
+    padding: 0px 0px 0px 40px;
+    font-size: 1.15rem;
+}
+
+.appPurpose{
+    font-size: 1.75rem;
+}
+
+/* main */
+main{
+    text-align: center;
+}
+
+.hobbiesContainer{
+    width: 260px;
+    margin: 0px auto;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    border-bottom: none;
+}
+
+.hobby{
+    display: flex;
+    justify-content: space-between;
+    padding: 7px;
+    border-bottom: 1px solid lightgrey;
+    accent-color: red;
+}
+
+.highlight{
+    background-color: aquamarine;
+}
+
+/* footer */
+.inputContainer{
+    text-align: center;
+    margin: 20px 0px;
+}
+
+button{
+    display: block;
+    padding: 15px;
+    border: none;
+    background-color: blanchedalmond;
+    border-radius: 10px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    margin: 20px auto;
+    color: blueviolet;
+    cursor: pointer;
+}
+
+button:focus, button:active{
+    transform: scale(0.95);
+}

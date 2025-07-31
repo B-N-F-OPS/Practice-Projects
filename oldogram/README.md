@@ -1,0 +1,1 @@
+this is an Instagram clone called oldagram. as a practice test i went ahead and iterated via 3 posts and set a scroll effect. everytime the user scrolls the window, the next post in the array will be iterated and displayed. there's trully no limit to what code can really do.

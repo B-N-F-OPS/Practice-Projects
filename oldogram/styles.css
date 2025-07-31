@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'Forester Regular';
+    src: url('./Assets/forester.regular.ttf');
+}
+
+.container{
+    width: 375px;
+    margin: 50px auto;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+/* header section */
+h1{
+    font-family: 'Forester Regular';
+    margin: 0;
+    padding-left: 23px;
+    font-size: 2rem;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #C6C6C6;
+}
+
+.account{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/* section 1 profile */
+img.avatar{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+section.profileinfo{
+    display: flex;
+    align-items: center;
+}
+
+h2{
+    font-size: 0.75rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    padding-left: 5px;
+}
+
+span.place{
+    font-weight: lighter;
+    font-size: 0.6rem;
+}
+
+/* post section */
+img.post{
+    width: 100%;
+    height: 375px;
+}
+
+/* likes section */
+section.like{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+img.love{
+    width: 30px;
+    height: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+button{
+    background: none;
+    border: none;
+}
+
+img.love:hover,
+img.love:focus{
+    background-color: #e7e7e7;;
+    transform: scale(1.1);
+}
+
+h3{
+    padding-left: 10px;
+    font-size: 0.85rem;
+    font-weight: bolder;
+}
+
+h4{
+    padding-left: 10px;
+    padding-bottom: 20px;
+    font-weight: lighter;
+}
+
