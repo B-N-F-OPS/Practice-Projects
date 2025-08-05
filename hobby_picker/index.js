@@ -5,6 +5,7 @@ const getPartnerBtn = document.getElementById('getPartner-btn')
 const imageDiv = document.getElementById('image-div')
 const modalContainer = document.getElementById('modal')
 const closeModalBtn = document.getElementById('closeModalBtn')
+const testContainer = document.getElementById('testContainer')
 // const checkBoxEl = document.getElementById('checkbox')
 
 
@@ -17,9 +18,9 @@ renderHobbies() // calling the function to render the hobbies without any duplic
 
 
 document.addEventListener('click', (e)=> {
-
     //function to highlight the radios when clicked
     hobbiesContainer.addEventListener('change', ()=> {
+
         const radioCheck =  document.querySelector('input[type="radio"]:checked');
         const radioClass = document.getElementsByClassName('hobby') //returns an array so i need to iterate
 
@@ -48,13 +49,14 @@ document.addEventListener('click', (e)=> {
         return filterEnglish     
     }
 
-
+    // get the url for the picture from a random Array that has already been filtered
     function getpicture(dataFiltered) {
         const randomIndex = Math.floor( Math.random()* dataFiltered.length )
         return dataFiltered[randomIndex].picture
     }
 
 
+    // when user clicks on GETPARTNER button
     getPartnerBtn.addEventListener('click', ()=> {
         const boxCheck =  document.querySelector('input[type="checkbox"]:checked');
         const radioCheck =  document.querySelector('input[type="radio"]:checked');
@@ -65,21 +67,24 @@ document.addEventListener('click', (e)=> {
             const picture = getpicture(boxIsCheckedArray)
             modalContainer.style.display = 'block'
             imageDiv.innerHTML = `<img class='imgResult' src="${picture}">`
+            testContainer.classList.add('testcontainer')
 
         } else if (radioCheck) {
             const pics = getpicture(getHobbyArrays)
             modalContainer.style.display = 'block'
             imageDiv.innerHTML = `<img class='imgResult' src="${pics}">`
+            testContainer.classList.add('testcontainer')
         } else {
             alert('select something Hitler')
         }
+        
 
     })
 
     closeModalBtn.addEventListener('click', ()=> {
         modalContainer.style.display = 'none'
+        testContainer.classList.remove('testcontainer')
     })
-
 
 })
 

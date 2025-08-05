@@ -154,3 +154,8 @@ main{
     animation-name: fade;
     animation-duration: 1s;
 }
+
+
+.testcontainer{
+    filter: blur(10px);
+}
