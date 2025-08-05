@@ -72,3 +72,31 @@ export const data = [
     languages: ["English", "Swahili"]
   }
 ];
+
+
+
+//function to render the hobbies on page load
+export function renderHobbies() {
+  let hobbiesArray = []
+  let hobby = ''
+  for (let sets of data) {
+    for (let set of sets.hobbies)
+        if (!hobbiesArray.includes(set)) {
+            hobbiesArray.push(set) // will return an array of all hobbies, but with duplicates
+        }
+    }
+    // loping to remove hobby duplicates
+    for (let i=0; i<hobbiesArray.length; i++) {
+        hobby += `
+        <div class="hobby">
+            <label for="${hobbiesArray[i]}">${hobbiesArray[i]}</label>
+            <input
+                type="radio"
+                id="${hobbiesArray[i]}"
+                name="hobby-choice"
+                value="${hobbiesArray[i]}"
+            >
+        </div>`
+    }
+    hobbiesContainer.innerHTML = hobby
+}

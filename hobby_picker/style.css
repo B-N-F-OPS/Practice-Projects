@@ -6,6 +6,7 @@ body{
     width: 400px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin: 20px auto;
+    position: relative;
 }
 
 header{
@@ -62,7 +63,7 @@ main{
     margin: 20px 0px;
 }
 
-button{
+.getPartner-btn{
     display: block;
     padding: 15px;
     border: none;
@@ -74,6 +75,82 @@ button{
     cursor: pointer;
 }
 
-button:focus, button:active{
+.getPartner-btn:focus, .getPartner-btn:active{
     transform: scale(0.95);
+}
+
+/* slides */
+.modal{
+    display: none;
+    margin: 0px auto;
+    width: 450px;
+    height: 490px;
+    border: none;
+    background-color: antiquewhite;
+    position: fixed;
+    top: 0;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;   
+}
+
+.closeModalBtn {
+    font-size: 1rem;
+    border: none;
+    background: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 7px 7px;
+}
+
+.closeModalBtn:hover{
+    background-color: antiquewhite;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.closeModalBtn:focus, .closeModalBtn:active {
+    color: brown;
+}
+
+.imgResult{
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.previous, .next{
+    font-weight: lighter;
+    position: absolute;
+    top: 50%;
+    padding: 25px 7px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: antiquewhite;
+}
+
+.next{
+    right: 0;
+}
+
+.previous:hover, .next:hover{
+    background-color: rgb(78, 77, 77);
+    color: aliceblue;
+}
+
+.previous:active,
+.next:active,
+.previous:focus,
+.next:focus {
+    padding: 24px 6px;
+    animation-name: fade;
+    animation-duration: 1s;
 }

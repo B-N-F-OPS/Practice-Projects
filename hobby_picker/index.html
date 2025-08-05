@@ -14,7 +14,17 @@
             <main>
                 <h2>select your current hobby</h2>
                 <div class="hobbiesContainer" id="hobbiesContainer">
-                    <!-- hobbies here -->
+                    <!-- hobbies here formated like below-->
+                    <!-- <div class="hobby">
+                        <label for="${hobby}">${hobby}</label>
+                        <input
+                            type="radio"
+                            id="coding"
+                            name="hobby-choice"
+                            value="coding"
+                        >
+                    </div> -->
+
                 </div>
             </main>
             <footer>
@@ -22,12 +32,31 @@
                     <label for="gif">speaks english only</label>
                     <input
                         type="checkbox"
-                        id="gif"   
+                        id="checkbox"   
                     >
                 </div>
-                <button id="getPartner-btn">GET PARTNER</button>
+                <button class="getPartner-btn" id="getPartner-btn">GET PARTNER</button>
             </footer>
+        
+
+        <div class="modal" id="modal"> <!--  modal container -->
+            <button class="closeModalBtn" id="closeModalBtn">X</button>
+            <div id="image-div">
+                 <!-- <img class='imgResult' src="./Assets/Aisha.avif"> -->
+                 <!-- IMAGE HERE -->
+            </div>
+            <div class="pre-next-Btns">
+                <button class="previous" id="previous">&lt;</button>
+                <button class="next" id="next">&gt;</button>
+            </div>
+                
+
+            
+
         </div>
+
+        </div>
+
         <script src="index.js" type="module"></script>
     </body>
 </html>

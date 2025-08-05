@@ -1,108 +1,91 @@
-import { data } from './data.js'
+import { data, renderHobbies } from './data.js'
 
 const hobbiesContainer = document.getElementById('hobbiesContainer');
 const getPartnerBtn = document.getElementById('getPartner-btn')
+const imageDiv = document.getElementById('image-div')
+const modalContainer = document.getElementById('modal')
+const closeModalBtn = document.getElementById('closeModalBtn')
+// const checkBoxEl = document.getElementById('checkbox')
 
-//function to remove duplicate hobbies. this function is an array
-function removeDoubles() {
-    let hobbiesArray = []
-    for (let person of data) {
-        for (let hobby of person.hobbies) {
-            if (!hobbiesArray.includes(hobby)) {
-                hobbiesArray.push(hobby)
+
+
+renderHobbies() // calling the function to render the hobbies without any duplicates
+
+// function with eventListener to handle changes in radio buttons plus highlight
+// function to listen checkbox:checked and take data from radio buttons and filter the data for english only
+// getpartner button should check if checkbox is checked or not. if checked, find picture url and render the data into the modal box
+
+
+document.addEventListener('click', (e)=> {
+
+    //function to highlight the radios when clicked
+    hobbiesContainer.addEventListener('change', ()=> {
+        const radioCheck =  document.querySelector('input[type="radio"]:checked');
+        const radioClass = document.getElementsByClassName('hobby') //returns an array so i need to iterate
+
+        if (radioCheck) {
+            for (let radios of radioClass) {
+                radios.classList.remove('highlight')
             }
+            document.getElementById(e.target.id).parentElement.classList.add('highlight')
         }
-     }
-     return hobbiesArray //returns an array
-}
+    });
 
-// loop through the data and render out each hobby
-function render() {
-    let allhobbies = ''
-    for (let hobby of removeDoubles()) { 
-        allhobbies += `
-        <div class="hobby">
-            <label for="${hobby}">${hobby}</label>
-            <input
-                type="radio"
-                id="${hobby}"
-                name="hobby-choice"
-                value="${hobby}"
-            >
-        </div>`
-    }
-    hobbiesContainer.innerHTML = allhobbies
- }
-
-render()
-
-//select one single hobby, collect the id of selected and highlight selection.
-function highlightchecked(e) {
-    const hobbys = document.getElementsByClassName('hobby')
-    for (let hobby of hobbys) {
-        hobby.classList.remove('highlight')
-    }
-    document.getElementById(e.target.id).parentElement.classList.add('highlight')
-}
-
-//listening for change of radio buttons within the contaimer
-hobbiesContainer.addEventListener('change', highlightchecked)
-
-//check if the the radio has been checked when clicking the button and checkbox checked
-//button click
-getPartnerBtn.addEventListener('click', ()=> {
-    // function. check which radio is checked
-    function radioCheck() { //returns a value e.g coding
-        const isRadioChecked= document.querySelector('input[type="radio"]:checked');
-        if(isRadioChecked) {
-            return isRadioChecked.value //returns e.g coding, vlogging...
-        }
-    }
-
-    // check if checkbox is checked and return the filtered list
-    function boxCheck() { //returns an array of people who speak english. has objects inside 
-        const isBoxChecked = document.querySelector('input[type="checkbox"]:checked');
-        if (isBoxChecked) {
-            const language = data.filter( (set)=> {
-                return set.languages.includes("English")
-            })
-            return language
-        }
-    }
-
-    // function to return people with shared hobby
-    function shareHobby() { //returns an array of people who share checked hobby
-        const hobbyPeople = data.filter( (set)=> {
-            return set.hobbies.includes(radioCheck())
+    //fuction to get only the hobbies of radios
+    function getHobbyArray() {
+        const filteredHobbies = data.filter( (set)=> {
+            return set.hobbies.includes(e.target.value)
         })
-        return hobbyPeople 
+        return filteredHobbies
     }
 
-    //function if people select both radio and checkbox
-    function newArrays() { //returns a combined array of english people and shared hobby people
-        let newArray = boxCheck()
-        for (let share of shareHobby()) {
-            newArray.push(share)
+    // filtering getHobbyArray() to get only the english people
+    function boxIsChecked() {
+        const filteredHobbies = getHobbyArray()
+        const filterEnglish = filteredHobbies.filter((set)=> {
+            return set.languages.includes('English')
+        })
+        return filterEnglish     
+    }
+
+
+    function getpicture(dataFiltered) {
+        const randomIndex = Math.floor( Math.random()* dataFiltered.length )
+        return dataFiltered[randomIndex].picture
+    }
+
+
+    getPartnerBtn.addEventListener('click', ()=> {
+        const boxCheck =  document.querySelector('input[type="checkbox"]:checked');
+        const radioCheck =  document.querySelector('input[type="radio"]:checked');
+        let boxIsCheckedArray = boxIsChecked()
+        let getHobbyArrays = getHobbyArray()
+
+        if(boxCheck && radioCheck) {
+            const picture = getpicture(boxIsCheckedArray)
+            modalContainer.style.display = 'block'
+            imageDiv.innerHTML = `<img class='imgResult' src="${picture}">`
+
+        } else if (radioCheck) {
+            const pics = getpicture(getHobbyArrays)
+            modalContainer.style.display = 'block'
+            imageDiv.innerHTML = `<img class='imgResult' src="${pics}">`
+        } else {
+            alert('select something Hitler')
         }
-        return newArray // array of both english and hobbie people but has duplicates
-    }
 
-    console.log(newArrays())
+    })
 
-    // const oldArrays = data.filter( (set)=> {
-    //     newArray.push( set.languages.includes("English") )
-    // })
+    closeModalBtn.addEventListener('click', ()=> {
+        modalContainer.style.display = 'none'
+    })
 
 
-    //if radio and/or box are checked
-    // if ( radioCheck() && boxCheck() ) {
-    //     console.log('both checked')
-    // } else if (radioCheck()){
-    //     console.log('radio checked')
-    // } else {
-    //     console.log('you have to select a hobby')
-    // }
+})
 
-});
+
+
+
+
 
 
