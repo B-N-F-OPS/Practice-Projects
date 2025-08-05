@@ -1,0 +1,122 @@
+/* heading and logo */
+.mainContainer{
+    width: 400px;
+    margin: 40px auto;
+    font-family: "Nova Square", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    /* text-align: center; */
+    
+}
+
+.loginBox{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 300px;
+    border-radius: 20px;
+    background-color: azure;
+}
+
+img{
+   width: 100px;
+   height: 100px; 
+}
+
+.header{
+    display: flex;
+    text-align: start;
+    margin-left: 10%;
+    margin-bottom: 40px;
+}
+
+h1{
+    margin-left: 10px;
+    margin-bottom: 0px;
+    
+}
+
+.motto{
+    font-size: 1rem;
+}
+
+/* company name */
+.companyName{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 15%;
+}
+
+h2{
+    font-size: 2rem;
+    color: ;
+    text-shadow: -5px 1px 5px antiquewhite;
+}
+
+/* form section */
+.formHeading{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: underline;
+    padding-left: 15%;
+}
+
+input{
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 30px;
+    width: 70%;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+input[type="email"], input[type="password"] {
+    padding: 5px 15px;
+}
+
+.submit{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 32%;
+    gap: 10px;
+}
+
+button{
+    border: none;
+    border-radius: 5px;
+    background-color: antiquewhite;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:focus, button:active {
+    color: black;
+    background-color: aliceblue;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 17%;
+}
+
+h4{
+    text-align: center;
+}
+
+.createAccount{
+    text-decoration: underline;
+}
+
+.createAccount:hover{
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.createAccount:active{
+    color: red;
+}
