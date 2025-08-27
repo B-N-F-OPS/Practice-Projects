@@ -33,20 +33,58 @@
                 <h2>EDGE LABS LTD</h2>
             </section>
 
-            <main class="loginBox">
+            <!-- create new account box -->
+            <form class="newAccountForm" id="newAccountForm">
+                <input
+                    required
+                    type="text"
+                    placeholder="Full name"
+                    id="newName"
+                    name="newName-input"
+                >
+
+                <input
+                    required
+                    type="email"
+                    placeholder="email"
+                    id="newEmail"
+                    name="newEmail-input"
+                >
+
+                <input
+                    required
+                    type="password"
+                    placeholder="New password"
+                    id="newPassword"
+                    name="newPassword-input"
+                >
+                <input
+                    required
+                    type="password"
+                    placeholder="confirm password"
+                    id="confirmPassword"
+                    name="confirmPassword-input"
+                >
+                <p id="nomatch"></p>
+
+                <button type="submit" id="newAccBtn">Create New Account</button>
+            </form>
+
+            <!-- login box -->
+            <main class="loginBox" id="loginBox">
 
                 <div class="formHeading">
                     <i class="fa-solid fa-lock"></i>
                     <h3>Enter your Login information</h3>
                 </div>
 
-                <form>
+                <form id="loginForm">
                     <input
                         required
                         type="email"
-                        placeholder="email"
+                        placeholder="johndoe@email.com"
                         id="email"
-                        name="form-input"
+                        name="email-input"
                     >
                     
                     <input
@@ -54,22 +92,27 @@
                         type="password"
                         placeholder="password"
                         id="password"
-                        name="form-input"
+                        name="password-input"
                     >
 
                     <div class="submit">
                         <i class="fa-solid fa-lock-open"></i>
-                        <button type="submit">LOGIN</button>
+                        <button type="submit" id="loginBtn">LOGIN</button>
                     </div>
                 </form>
             </main>
 
-            <footer>
+            <footer id="footer">
                 <h4>⬅ <a href="#" target="_blank">Forgot Password</a></h4>
-                <h4 class="createAccount">create account</h4>
+                <h4 class="createAccount" id="newAccountLink">create account</h4>
             </footer>
 
+            <!-- <button id="deleteBtn">DELETE DATABASE</button> -->
+
         </div>
+
+        <h4 class="accSuccess" id="accSuccess">✓ ACCOUNT CREATED SUCCESSFULLY !!!</h4>
+        <script src="./script.js" type="module"></script>
 
     </body>
 </html>

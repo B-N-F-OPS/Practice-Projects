@@ -5,7 +5,7 @@
     font-family: "Nova Square", sans-serif;
     font-weight: 400;
     font-style: normal;
-    /* text-align: center; */
+    position: relative;
     
 }
 
@@ -48,7 +48,6 @@ h1{
 
 h2{
     font-size: 2rem;
-    color: ;
     text-shadow: -5px 1px 5px antiquewhite;
 }
 
@@ -71,7 +70,7 @@ input{
     margin-top: 30px;
 }
 
-input[type="email"], input[type="password"] {
+input[type="email"], input[type="password"], input[type="text"] {
     padding: 5px 15px;
 }
 
@@ -119,4 +118,40 @@ h4{
 
 .createAccount:active{
     color: red;
+}
+
+
+/* new account form */
+.newAccountForm{
+    display: none;
+    box-shadow: rgba(0, 127, 255) 0px 3px 8px;
+    margin-bottom: 50px;
+}
+
+#newAccBtn, #deleteBtn{
+    margin: 20px 0 20px 27%;
+}
+
+p{
+    color: red;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.accSuccess{
+    display: none;
+    font-size: 1.25rem;
+    background: antiquewhite;
+    color: green;
+    text-shadow: 0px 3px 3px black;
+    text-align: center;
+    height: 70px;
+    padding: 30px 20px;
+    width: 300px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
