@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="style.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+        <!-- main container -->
+        <div class="container" id="container">
+            <!-- head section -->
+            <header>
+                <h1 class="restuarantName">Jimmy's dinner<br>
+                    <span class="motto">The best burgers and pizzas in town.</span>
+                </h1>
+
+                <h2 class="themePack" id="themePack">🌙</h2>  
+
+            </header>
+            
+            <!-- menu section each iteration will add a NEW SECTION-->
+             <div id="jimmysMenu">
+
+                <!-- <section class=" menu">
+                    <h2 class="emoji">⭐</h2>
+                    <div class="menuItems">
+                        <h2 class="itemName">Pizza</h2>
+                        <h3 class="ingredients">beef, mushroom, mozarella</h3>
+                        <h4 class="itemPrice">$ 12</h4>
+                    </div>
+                    <button class="addBtn">+</button>
+                </section> -->
+
+                
+            </div>
+            
+
+            <div class="endNote" id="endNote">
+                <h4 class="endMessage" id="endMessage"></h4>
+            </div>
+
+        </div>
+
+        <!-- pre-checkout container-->
+        <div class="preCheckoutContainer preCheckout" id="preCheckoutContainer">
+            <h1 class="precheckoutTitle">Your order</h1>
+
+            <div class="odersContainer" id="odersContainer">
+                <!-- orders will appear here -->
+
+                <!-- <div class="orderItems">
+                    <h2 class=" itemName">pizza</h2>
+                    <button class="removeBtn" id='removeBtn'>remove</button>
+                    <h3 class="orderXprice itemPrice">$ 14</h3>
+                </div> -->
+
+            </div>
+            
+            <div class="priceSection">
+                <h3 class="totalPrice">Total Price:</h3>
+                <h3 class="itemPrice" id="totalPrice"></h3>
+            </div>
+
+
+            <h4 class="completeOrder" id="completeOrderBtn">complete order</h4>
+        </div>
+
+        <!-- checkout page -->
+        <div class="checkoutContainer checkoutPage" id="checkoutContainer">      
+            <h1 class="checkoutTitle">Enter card details</h1>
+
+            <form id="paymentForm">
+                <input
+                    name="fullName"
+                    type="text"
+                    placeholder="Enter your name"
+                    required
+                >
+                <input
+                    name="cardNumber"
+                    type="number"
+                    placeholder="Enter card number"
+                    required
+                >
+                <input
+                    name="cardCVV"
+                    type="number"
+                    placeholder="Enter CVV"
+                    min= '3'
+                    required
+                >
+
+                <button type="submit" class="submitBtn">Pay</button>
+            </form>
+
+        </div>  
+
+        <div class="rateCard rates" id="rateCard">
+            <h1 class="rate">Rate your Experience</h1>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <h2 class="rate">Rating 0/5</h2>
+        </div>
+
+	    <script src="index.js" type="module"></script>
+    </body>
+</html>

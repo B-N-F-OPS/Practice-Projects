@@ -1,0 +1,304 @@
+@font-face {
+    font-family: smythe;
+    src: url('./Assets/smythe.regular.ttf');
+}
+
+body{
+    margin: 0;
+    font-family: smythe;
+}
+
+/* the full container */
+.container{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 600px;
+    height: 1161px;
+    margin: 20px auto;
+    position: relative;
+    overflow-y: auto;
+}
+
+/* the head section */
+header{
+    height: 167px;
+    background-image: url('https://th.bing.com/th/id/R.407047286e981139f85888d9dd9c2d63?rik=KdF8A1aT8l%2bpNg&riu=http%3a%2f%2fxburgers.co.in%2fimg%2fbanner3.jpg&ehk=et7%2fOMrk2sFdhPOJZAkDrNOD9rbxFJ76l5zUeVGyxO8%3d&risl=&pid=ImgRaw&r=0');
+    background-size: cover;
+    color: white;
+    background-color: aqua;
+    font-weight: 100;
+
+}
+
+h1, h2, h3, h4{
+    margin: 0;
+}
+
+.restuarantName{
+    padding: 43.5px 0px 0px 50px;
+    font-weight: lighter;
+}
+
+.motto{
+    font-size: 1.2rem;
+
+}
+
+/* theme packs */
+.themePack{
+    display: inline;
+    align-self: end;
+    margin-left: 550px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.themePack:hover{
+    background-color: #333232;
+}
+
+/* menu section */
+section{
+    width: 508px;
+    height: 140px;
+    border-bottom: 2px solid rgb(226, 226, 226);
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+}
+
+.menuItems{
+    margin-left: 20px;
+}
+
+.emoji{
+    font-size: 3rem;
+    
+}
+
+.itemName{
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.ingredients{
+    font-weight: lighter;
+    font-size: 1rem;
+    color: grey;
+    padding: 5px 0px 17px 0px;
+}
+
+.itemPrice{
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.addBtn{
+    padding: 15px;
+    border-radius: 50%;
+    background: none;
+    border: 1px solid rgb(212, 209, 209);
+    margin-left: auto;
+}
+
+button:hover, button:active {
+    background-color: rgb(219, 215, 215);
+    color: black;
+    cursor: pointer;
+}
+
+/* pre-checkout container */
+.preCheckoutContainer{
+    width: 508px;
+    height: 319px;
+    position: absolute;
+    margin: auto;
+    top: 990px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+
+.preCheckout{
+    display: none;
+}
+
+.odersContainer{
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: white;
+    height: 100px;
+}
+
+.precheckoutTitle{
+    text-align: center;
+    font-weight: lighter;
+    font-size: 1.8rem;
+    background-color: white;
+}
+
+.orderItems{
+    display: flex;
+    align-items: center;
+}
+
+.removeBtn{
+    border: none;
+    background: none;
+    color: rgb(206, 206, 206);
+    border-radius: 20px;
+    margin-left: 10px;    
+}
+
+.orderXprice{
+    margin-left: auto;
+}
+
+.completeOrder{
+    text-align: center;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #16DB99;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.completeOrder:active{
+    color: black;
+}
+
+.completeOrder:hover{
+    background-color: #0b7e58;
+}
+
+.priceSection{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+    border-top: 2px solid grey;
+}
+
+.totalPrice{
+    font-weight: lighter;
+    font-size: 2rem;
+}
+
+/* checkout container */
+.checkoutContainer{
+    position: absolute;
+    margin: auto;
+    top: 210px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 524px;
+    height: 542.24PX;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.checkoutPage{
+    display: none;
+}
+
+.checkoutTitle{
+    font-weight: bold;
+    font-size: 1.4rem;
+    padding: 30px 0px;
+
+}
+
+input{
+    width: 450px;
+    height: 71px;
+    margin-top: 23px;
+    cursor: pointer;
+    border: 2px solid #757575;
+    border-radius: 5px;
+}
+
+input[type='text'], input[type='number'] {
+    padding-left: 20px;
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+.submitBtn{
+    background-color: #16DB99;
+    border: none;
+    margin-top: 40px;
+    width: 470px;
+    height: 71.3px;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.submitBtn:hover{
+    color: black;
+}
+
+.submitBtn:hover{
+    background-color: #0b7e58;
+}
+
+/* end note */
+.endNote{
+    display: none;
+    background-color: #ECFDF5;
+    width: 504px;
+    height: 120px;
+    text-align: center;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.endMessage{
+    padding-top: 40px;
+    font-size: 1.6rem;
+    color: #065F46;
+    font-weight: lighter;
+}
+
+/* rate card */
+.rateCard{
+    position: absolute;
+    margin: auto;
+    top: 810px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333232;
+    color: aliceblue;
+    font-weight: lighter;
+    border-radius: 10px;
+    padding-top: 20px;
+    width: 300px;
+    height: 150px;
+    margin: 20px auto;
+    box-shadow: rgba(51, 51, 51, 0.24) 0px 3px 8px;
+    text-align: center;
+}
+
+.rates{
+    display: none;
+}
+
+.fa-solid{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.rate{
+    font-weight: lighter;
+}
